@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "961079760574",
+    "firebase_url": "https://idelivery-e0554.firebaseio.com",
+    "project_id": "idelivery-e0554",
+    "storage_bucket": "idelivery-e0554.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961079760574:android:a7f5250e4a09d36a1570ef",
+        "android_client_info": {
+          "package_name": "com.example.liew.idelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961079760574-hgrledi633efootlglo9ekbm7h0l79kj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.liew.idelivery",
+            "certificate_hash": "bdd2fabfe99ffb04c673401313ed7db3bdc2af98"
+          }
+        },
+        {
+          "client_id": "961079760574-jo81133g049fabl1qsoj44q8og411erh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFU-091zXj9qh3nuNNNsVWdyWd_YLzFCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961079760574-jo81133g049fabl1qsoj44q8og411erh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
