@@ -1,22 +1,20 @@
 package com.example.liew.idelivery.Service;
 
-
+import com.example.liew.idelivery.Common.Common;
+import com.example.liew.idelivery.Model.Token;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
-//import com.google.firebase.iid.FirebaseInstanceIdService;
-import com.example.liew.idelivery.Common.Common;
-import com.example.liew.idelivery.Model.Token;
+import com.google.firebase.messaging.FirebaseMessagingService;
 
-/**
- * Created by kundan on 12/21/2017.
+;
 
 
-public class MyFirebaseIdService extends FirebaseInstanceIdService {
+public class MyFirebaseIdService extends FirebaseMessagingService {
 
     @Override
-    public void onTokenRefresh() {
-        super.onTokenRefresh();
+    public void onNewToken(String token) {
+        super.onNewToken(token);
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
         if (Common.currentUser != null) {
             updateToServer(refreshedToken);
@@ -30,4 +28,4 @@ public class MyFirebaseIdService extends FirebaseInstanceIdService {
             tokens.child(Common.currentUser.getPhone()).setValue(token);
     }
 
-}*/
+}

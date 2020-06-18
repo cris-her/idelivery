@@ -6,8 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-//import android.support.design.widget.FloatingActionButton;
-
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.liew.idelivery.Common.Common;
+import com.example.liew.idelivery.Model.Banner;
+import com.example.liew.idelivery.ViewHolder.BannerViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,10 +35,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.example.liew.idelivery.Common.Common;
-import com.example.liew.idelivery.Model.Banner;
-import com.example.liew.idelivery.R.id;
-import com.example.liew.idelivery.ViewHolder.BannerViewHolder;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.squareup.picasso.Picasso;
 
@@ -46,6 +43,8 @@ import java.util.Map;
 import java.util.UUID;
 
 import info.hoang8f.widget.FButton;
+
+//import android.support.design.widget.FloatingActionButton;
 
 public class BannerActivity extends AppCompatActivity {
 
@@ -62,7 +61,7 @@ public class BannerActivity extends AppCompatActivity {
     FirebaseStorage storage;
     StorageReference storageReference;
 
-    FirebaseRecyclerAdapter<Banner,BannerViewHolder> adapter;
+    FirebaseRecyclerAdapter<Banner, BannerViewHolder> adapter;
 
     MaterialEditText edtName,edtFoodId;
     FButton btnUpload,btnSelect;
@@ -96,7 +95,7 @@ public class BannerActivity extends AppCompatActivity {
                 showAddBanner();
             }
         });
-        
+
         loadListBanner();
     }
 
