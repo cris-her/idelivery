@@ -13,11 +13,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.liew.idelivery.Common.Common;
 import com.example.liew.idelivery.Model.User;
-/*import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;*/
+import com.google.firebase.database.ValueEventListener;
+
+import io.paperdb.Paper;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -51,14 +53,16 @@ public class MainActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent signIn = new Intent(MainActivity.this,SignIn.class);
+                startActivity(signIn);
             }
         });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent signUp = new Intent(MainActivity.this,SignUp.class);
+                startActivity(signUp);
             }
         });
 
@@ -71,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 login(user,pwd);
         }*/
     }
-
-    /*private void login(final String phone, final String pwd) {
+/*
+    private void login(final String phone, final String pwd) {
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_user = database.getReference("User");
 
